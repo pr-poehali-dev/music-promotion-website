@@ -54,7 +54,7 @@ const channels = [
   { name: "Apple Music", icon: "Music2", followers: "1.8K", link: "#" },
   { name: "YouTube", icon: "Play", followers: "5.1K", link: "#" },
   { name: "ВКонтакте", icon: "Users", followers: "3.7K", link: "#" },
-  { name: "Telegram", icon: "Send", followers: "1.2K", link: "#" },
+  { name: "Telegram", icon: "Send", followers: "1.2K", link: "https://t.me/leenayzee" },
   { name: "SoundCloud", icon: "Cloud", followers: "890", link: "#" },
 ];
 
