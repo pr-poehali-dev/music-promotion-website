@@ -537,7 +537,7 @@ const Index = () => {
               <div className="flex flex-col gap-8 pt-2">
                 {[
                   { icon: "Mail", label: "Email", value: "hello@soundscape.ru" },
-                  { icon: "MessageCircle", label: "Telegram", value: "@soundscape_music" },
+                  { icon: "MessageCircle", label: "Telegram", value: "@leenayzee_15" },
                   { icon: "Instagram", label: "Instagram", value: "@soundscape.music" },
                 ].map(c => (
                   <div key={c.label} className="flex items-start gap-4">
