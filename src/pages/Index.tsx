@@ -13,39 +13,32 @@ const navLinks = [
   { id: "contacts", label: "Контакты" },
 ];
 
-const tracks = [
-  { id: 1, title: "Ночной горизонт", genre: "Ambient / Electronic", duration: "4:32", year: "2024" },
-  { id: 2, title: "Тени рассвета", genre: "Dark Pop", duration: "3:58", year: "2024" },
-  { id: 3, title: "Пустые улицы", genre: "Cinematic", duration: "5:14", year: "2023" },
-  { id: 4, title: "Эхо прошлого", genre: "Ambient", duration: "6:02", year: "2023" },
-  { id: 5, title: "Последний свет", genre: "Electronic", duration: "3:47", year: "2024" },
-  { id: 6, title: "Между мирами", genre: "Dark Ambient", duration: "7:21", year: "2022" },
-];
+const tracks: { id: number; title: string; genre: string; duration: string; year: string }[] = [];
 
 const services = [
   {
     icon: "Music",
-    title: "Написание треков",
-    desc: "Создание оригинальных авторских треков под ваше настроение, проект или бренд.",
-    price: "от 15 000 ₽"
-  },
-  {
-    icon: "Mic2",
-    title: "Запись вокала",
-    desc: "Профессиональная запись и обработка вокала в домашней студии с отличной акустикой.",
-    price: "от 5 000 ₽"
+    title: "Продакшн",
+    desc: "Полноценное создание трека с нуля: от идеи до финального файла. Авторский звук, индивидуальный подход.",
+    price: "Уточняйте цену"
   },
   {
     icon: "Headphones",
-    title: "Сведение и мастеринг",
-    desc: "Финальная обработка ваших треков: сведение, мастеринг, подготовка к стриминг-платформам.",
-    price: "от 8 000 ₽"
+    title: "Сведение",
+    desc: "Профессиональное сведение вашего материала. Баланс, пространство, динамика — всё под контролем.",
+    price: "Уточняйте цену"
   },
   {
-    icon: "Film",
-    title: "Музыка для видео",
-    desc: "Написание саундтреков и джинглов для рекламы, YouTube, подкастов и кино.",
-    price: "от 20 000 ₽"
+    icon: "Sliders",
+    title: "Кастомный пресет",
+    desc: "Разработка уникального пресета под ваш стиль и звук. Только для вас, никаких шаблонов.",
+    price: "Уточняйте цену"
+  },
+  {
+    icon: "Megaphone",
+    title: "Реклама",
+    desc: "Размещение рекламы у меня. Охваты, вовлечённая аудитория, музыкальная ниша.",
+    price: "Пишите в Telegram"
   },
 ];
 
@@ -288,7 +281,12 @@ const Index = () => {
             </h2>
 
             <div className="space-y-0">
-              {tracks.map((track, i) => (
+              {tracks.length === 0 ? (
+                <div className="py-16 text-center border border-border/30">
+                  <Icon name="Music" size={32} className="text-gold/30 mx-auto mb-4" />
+                  <p className="text-sm text-muted-foreground">Треки скоро появятся</p>
+                </div>
+              ) : tracks.map((track, i) => (
                 <div
                   key={track.id}
                   className="track-card group flex items-center gap-4 py-5 border-b border-border/40 cursor-pointer"
